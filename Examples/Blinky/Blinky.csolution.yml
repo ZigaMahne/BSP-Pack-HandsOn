@@ -10,6 +10,14 @@ solution:
     - compiler: GCC
     - compiler: IAR
 
+  # List of miscellaneous tool-specific controls
+  misc:
+    - for-compiler: AC6
+      C-CPP:
+        - -gdwarf-5
+      ASM:
+        - -gdwarf-5
+
   # List the packs that define the device and/or board.
   packs:
     - pack: ARM::CMSIS
@@ -36,4 +44,3 @@ solution:
   # list related projects
   projects:
     - project: ./Blinky.cproject.yml
-  compiler: AC6
